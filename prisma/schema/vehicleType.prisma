@@ -1,0 +1,7 @@
+model VehicleType {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  type carType @unique
+  Vehicle Vehicle[]
+}

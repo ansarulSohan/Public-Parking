@@ -1,0 +1,7 @@
+model Roles {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  role userRoles @unique
+  Users Users[]
+}

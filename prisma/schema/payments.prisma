@@ -1,0 +1,11 @@
+model Payments {
+  payment_id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  sessionId Int
+  session ParkingSessions @relation(fields: [sessionId], references: [sessionId])
+  amount Float
+  payment_method String
+  payment_status String
+  payment_date DateTime
+}

@@ -1,0 +1,22 @@
+enum carType {
+  Sedan
+  SUV
+  Truck
+  Minivan
+  Motorcycle
+  Electric
+  Hybrid
+}
+
+enum stutus {
+  Active
+  Overdue
+  Completed
+}
+
+enum userRoles {
+  Admin
+  User
+  Guest
+}
+

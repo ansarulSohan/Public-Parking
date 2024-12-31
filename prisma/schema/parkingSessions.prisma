@@ -1,0 +1,15 @@
+model ParkingSessions {
+  sessionId  Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  vehicleId Int
+  vehicle Vehicle @relation(fields: [vehicleId], references: [id])
+  start DateTime
+  end DateTime
+  user String?
+  rateId Int
+  paid_amount Float
+  due Float
+  status stutus @default(Active)
+  Payments Payments[]
+}

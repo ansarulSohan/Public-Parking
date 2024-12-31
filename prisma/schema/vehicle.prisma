@@ -1,0 +1,13 @@
+model Vehicle {
+  id Int @id @default(autoincrement())
+  licensePlate String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  vehicleTypeId Int
+  name String
+  description String?
+  imageUrl String?
+  type VehicleType @relation(fields: [typeID], references: [id])
+  typeID Int
+  ParkingSessions ParkingSessions[]
+}
